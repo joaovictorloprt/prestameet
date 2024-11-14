@@ -1,0 +1,4 @@
+[25-Oct-2017 23:26:22 America/Sao_Paulo] PHP Fatal error:  Call to undefined function open_database() in /home/c80erewa/public_html/admin/pagina/functions.php on line 99
+[25-Oct-2017 23:26:29 America/Sao_Paulo] PHP Fatal error:  Call to undefined function open_database() in /home/c80erewa/public_html/admin/pagina/functions.php on line 99
+[25-Oct-2017 23:26:41 America/Sao_Paulo] PHP Fatal error:  Call to undefined function open_database() in /home/c80erewa/public_html/admin/pagina/functions.php on line 99
+[25-Oct-2017 23:27:01 America/Sao_Paulo] PHP Fatal error:  Call to undefined function open_database() in /home/c80erewa/public_html/admin/pagina/functions.php on line 99

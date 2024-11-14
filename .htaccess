@@ -1,0 +1,9 @@
+RewriteEngine On
+#Options All -Indexes
+
+RewriteRule ^cadastro(|/)$ cadastro.php
+RewriteRule ^register(|/)$ cadastro.php
+RewriteRule ^cadastrar(|/)$ cadastro.php
+RewriteRule ^index(|/)$ index.php
+RewriteRule ^login(|/)$ login.php
+RewriteRule ^logout(|/)$ logout.php
