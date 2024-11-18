@@ -1,5 +1,6 @@
 RewriteEngine On
-#Options All -Indexes
+RewriteCond %{HTTPS} on
+RewriteRule ^(.*)$ http://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 RewriteRule ^cadastro(|/)$ cadastro.php
 RewriteRule ^register(|/)$ cadastro.php
