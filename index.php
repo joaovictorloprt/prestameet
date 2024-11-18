@@ -39,9 +39,6 @@ if (isset($_GET['status'])) {
     }
 }
 
-if (isset($_GET['user'])) {
-    $_SESSION['nome_perfil'] = $_GET['user'];
-}
 
 if ($_COOKIE['tipo_conta'] == 1) {
     $contas = select("contas", " WHERE login = '" . $_COOKIE['email'] . "' AND senha = '" . $_COOKIE['password'] . "'");
