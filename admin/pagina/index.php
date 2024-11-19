@@ -288,7 +288,7 @@ if($result->rowCount() == 0){} else {
             <div class="box-header with-border">
                 <div class="user-block">
                     <img class="img-circle" src="<?php echo $contas_post['foto']; ?>" alt="Minha Foto">
-                    <span class="username"><a href="#"><?php echo utf8_decode($contas_post['nome']); ?></a></span>
+                    <span class="username"><a href="#"><?php echo $contas_post['nome']; ?></a></span>
                     <span class="description">AVISO - <?php echo date("d/M. Y h:i", strtotime($postagem['data'])); ?></span>
                 </div>
                 <!-- /.user-block -->

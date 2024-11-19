@@ -41,7 +41,7 @@ if(isset($_POST['password'])){
         </div>
         <?php clear_messages(); ?>
     <?php endif; ?>
-    <div class="lockscreen-name"><?php echo utf8_decode($contas['nome']); ?></div>
+    <div class="lockscreen-name"><?php echo $contas['nome']; ?></div>
 
 
     <div class="lockscreen-item">

@@ -17,7 +17,7 @@ if($contas['tipo_conta'] == 2 && $chamado['ativo'] == 0){
 if(isset($_POST['enviar_proposta'])){
     if($contas['tipo_conta']==2 && $chamado['ativo'] == '1'){
 		$query_pro = $db->query("INSERT INTO propostas VALUES (NULL, '".$chamado['id']."', '".$chamado['id_cliente']."','".$contas['id']."','".$_POST['proposta']."','".$_POST['comentario_proposta']."','0')");
-        $query = $db->query("INSERT INTO notificacoes VALUES (NULL, '".$contas['id']."','".$chamado['id_cliente']."','".utf8_decode("Você recebeu uma proposta!")."','index?page=perfil_chamado&id=".$chamado['id']."',NOW())");
+        $query = $db->query("INSERT INTO notificacoes VALUES (NULL, '".$contas['id']."','".$chamado['id_cliente']."','"."Você recebeu uma proposta!"."','index?page=perfil_chamado&id=".$chamado['id']."',NOW())");
         echo "<script>alert('Sua proposta foi enviada, caso o usuário aceite, você será notificado...'); </script>";
     }
 }
@@ -28,7 +28,7 @@ if(isset($_POST['aceitar_proposta'])){
 		
 		$query_pro2 = $db->query("UPDATE chamados SET ativo = '0', id_prestador = '".$_POST['id_prestador_chamado']."' WHERE id = '".$chamado['id']."'");
 		
-        $query = $db->query("INSERT INTO notificacoes VALUES (NULL, '".$contas['id']."','".$_POST['id_prestador_chamado']."','".utf8_decode("Sua proposta foi aceita!")."','index?page=perfil_chamado&id=".$chamado['id']."',NOW())");
+        $query = $db->query("INSERT INTO notificacoes VALUES (NULL, '".$contas['id']."','".$_POST['id_prestador_chamado']."','"."Sua proposta foi aceita!"."','index?page=perfil_chamado&id=".$chamado['id']."',NOW())");
 		
         echo "<script>alert('Você acaba de aceitar o serviço! Em breve o prestador irá entrar em contato com você, ou até mesmo aparecer na sua casa!...'); window.location = '?page=chamado_andamento&id=".$chamado['id']."';</script>";
     }
