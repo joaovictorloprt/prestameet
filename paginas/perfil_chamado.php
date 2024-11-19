@@ -8,7 +8,7 @@ $endereco = ($casa['rua']." ".$casa['numero'].", ".$casa['bairro'].", ".$casa['c
 if($contas['tipo_conta'] == 2 && $chamado['ativo'] == 0){
 	$sql_1 = "SELECT * FROM propostas WHERE aceito = '1' AND id_chamado = '".$chamado['id']."' AND id_prestador = '".$contas['id']."'";
 	$query_1 = $db->query($sql_1);
-	$fetch_1 = $query_1->fetchAll();
+	$fetch_1 = $query_1->fetch();
 	if($contas['id'] == $fetch_1['id_prestador']){
 		echo "<script>window.location = '?page=chamado_andamento&id=".$chamado['id']."';</script>";
 	}
@@ -333,7 +333,7 @@ if($contas['novato'] != 1){
                     <div class="icon">
                         <i class="fa fa-bullhorn"></i>
                     </div>
-                    <?php }else{ $proposta = $query_proposta->fetchAll();
+                    <?php }else{ $proposta = $query_proposta->fetch();
 						if($proposta['aceito'] == '0'){
 					?>
 					<div class="col-md-4">
