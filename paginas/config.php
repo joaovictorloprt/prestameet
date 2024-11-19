@@ -1,8 +1,6 @@
 <?php
 
 if(isset($_POST['foto_perfil'])){
-	$nome = $_POST['nome'];
-	$email = $_POST['email'];
 	$foto = $_FILES["foto"];
 	
 	// Se a foto estiver sido selecionada
