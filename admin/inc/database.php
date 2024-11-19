@@ -1,19 +1,24 @@
 <?php
-
-mysqli_report(MYSQLI_REPORT_STRICT);
 function open_database() {
     try {
-        $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+        // Criação do objeto PDO
+        $conn = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4', DB_USER, DB_PASSWORD);
+        
+        // Configura o modo de erro para exceções
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
         return $conn;
-    } catch (Exception $e) {
+    } catch (PDOException $e) {
         echo $e->getMessage();
         return null;
     }
 }
+
 function close_database($conn) {
     try {
-        mysqli_close($conn);
-    } catch (Exception $e) {
+        // Encerra a conexão PDO
+        $conn = null;
+    } catch (PDOException $e) {
         echo $e->getMessage();
     }
 }
@@ -22,3 +27,4 @@ function clear_messages(){
     unset($_SESSION['message']);
     unset($_SESSION['type']);
 }
+?>

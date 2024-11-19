@@ -1,5 +1,5 @@
 <?php
-header('Content-Type: text/html; charset=utf-8');
+header('Content-Type: text/html; charset=utf8');
 session_start();
 
 /** O nome do banco de dados*/

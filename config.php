@@ -1,5 +1,5 @@
 <?php
-header('Content-Type: text/html; charset=utf-8');
+header('Content-Type: text/html; charset=utf8');
 session_start();
 
 /** O nome do banco de dados*/
@@ -7,7 +7,7 @@ define('DB_NAME', 'prestameet');
 /** Usuário do banco de dados MySQL */
 define('DB_USER', 'root');
 /** Senha do banco de dados MySQL */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', '1123PRESTAM3ET');
 /** nome do host do MySQL */
 define('DB_HOST', 'localhost');
 /** caminho absoluto para a pasta do sistema **/
