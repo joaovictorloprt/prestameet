@@ -9,7 +9,7 @@ if (isset($_GET['user'])) {
     if(!empty($perfil)){
         if ($perfil['tipo_conta'] == 1) {
             $perfil_conta = select("clientes", " WHERE id = " . $perfil['id_cliente']);
-        } else if ($_COOKIE['tipo_conta'] == 2) {
+        } else if ($perfil['tipo_conta'] == 2) {
             $perfil_conta = select("prestador", " WHERE id = " . $perfil['id_cliente']);
         }
 
