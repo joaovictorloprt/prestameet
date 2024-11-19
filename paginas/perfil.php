@@ -220,7 +220,7 @@ if (isset($_GET['user'])) {
 
                             <hr>
 
-                            <strong><i class="fa fa-map-marker margin-r-5"></i> Localiação</strong>
+                            <strong><i class="fa fa-map-marker margin-r-5"></i> Localização</strong>
                             <?php
                             if(empty($casa)){
                                 echo '<p class="text-muted"> Nenhum endereço cadastrado. </p><hr>';
